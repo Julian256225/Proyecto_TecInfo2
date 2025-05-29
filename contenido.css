@@ -1,13 +1,15 @@
-/* Variables para colores */
+/* Variables para colores - Tono Verde Pastel */
 :root {
-    --sky-blue-light: #B2EBF2; /* Un azul cielo muy claro */
-    --sky-blue-medium: #80DEEA; /* Un azul cielo un poco más intenso */
-    --sky-blue-dark: #4DD0E1; /* Un azul cielo más profundo */
-    --text-color-dark: #333;
-    --text-color-light: #fff;
-    --accent-color: #00BCD4; /* Un toque de azul turquesa para acentos */
-    --hover-color: #00AAC8;
-    --card-background: rgba(255, 255, 255, 0.9);
+    --pastel-green-lightest: #E0F8E0; /* Un verde muy claro */
+    --pastel-green-light: #C1E1C1;   /* Un verde claro */
+    --pastel-green-medium: #A8D8A8;  /* Un verde medio pastel */
+    --pastel-green-dark: #8FBC8F;    /* Un verde pastel más oscuro */
+    --text-color-dark: #333;          /* Gris oscuro para el texto principal */
+    --text-color-light: #fff;          /* Blanco para texto sobre fondos oscuros */
+    --accent-color: #6B8E23;         /* Verde oliva para acentos */
+    --hover-color: #556B2F;          /* Verde oliva más oscuro para hover */
+    --card-background: rgba(255, 255, 255, 0.8); /* Blanco translúcido para las tarjetas */
+    --pastel-secondary: #F0FFF0;      /* Otro tono pastel muy suave */
 }
 
 /* Estilos Generales */
@@ -15,7 +17,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom right, var(--sky-blue-light), var(--sky-blue-medium));
+    /* Cambiamos el degradado de azul a verde pastel */
+    background: linear-gradient(to bottom right, var(--pastel-green-lightest), var(--pastel-green-light));
     color: var(--text-color-dark);
     line-height: 1.6;
     overflow-x: hidden; /* Evitar scroll horizontal */
@@ -29,7 +32,8 @@ body {
 
 /* Encabezado Principal */
 .main-header {
-    background: linear-gradient(to right, var(--sky-blue-dark), var(--accent-color));
+    /* Cambiamos el degradado a tonos de verde */
+    background: linear-gradient(to right, var(--pastel-green-dark), var(--accent-color));
     color: var(--text-color-light);
     padding: 80px 0;
     text-align: center;
@@ -77,6 +81,7 @@ body {
 }
 
 .cta-button {
+    /* Cambiamos el color del botón de acción a verde oliva */
     background-color: var(--accent-color);
     color: var(--text-color-light);
     padding: 15px 30px;
@@ -92,6 +97,7 @@ body {
 }
 
 .cta-button:hover {
+    /* Cambiamos el color del hover del botón */
     background-color: var(--hover-color);
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -122,7 +128,8 @@ body {
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 40px;
-    color: var(--sky-blue-dark);
+    /* Cambiamos el color del título de la sección a un verde más oscuro */
+    color: var(--pastel-green-dark);
     position: relative;
 }
 
@@ -131,6 +138,7 @@ body {
     display: block;
     width: 60px;
     height: 4px;
+    /* Cambiamos el color de la línea debajo del título */
     background-color: var(--accent-color);
     margin: 15px auto 0;
     border-radius: 2px;
@@ -145,7 +153,7 @@ body {
 }
 
 .icon-item {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(var(--pastel-secondary-rgb), 0.7); /* Usando un tono pastel secundario */
     padding: 30px 20px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -158,13 +166,13 @@ body {
 
 .icon-item i {
     font-size: 3.5em;
-    color: var(--accent-color);
+    color: var(--accent-color); /* Iconos en verde oliva */
     margin-bottom: 15px;
 }
 
 .icon-item h3 {
     font-size: 1.5em;
-    color: var(--sky-blue-dark);
+    color: var(--pastel-green-dark); /* Títulos en verde pastel oscuro */
     margin-bottom: 10px;
 }
 
@@ -180,7 +188,8 @@ body {
     content: '';
     position: absolute;
     width: 4px;
-    background-color: var(--sky-blue-medium);
+    /* Línea de la timeline en un tono de verde pastel */
+    background-color: var(--pastel-green-medium);
     top: 0;
     bottom: 0;
     left: 50%;
@@ -209,7 +218,7 @@ body {
 .timeline-icon {
     width: 50px;
     height: 50px;
-    background-color: var(--accent-color);
+    background-color: var(--accent-color); /* Iconos de la timeline en verde oliva */
     border-radius: 50%;
     position: absolute;
     top: 25px;
@@ -220,12 +229,12 @@ body {
     justify-content: center;
     color: var(--text-color-light);
     font-size: 1.8em;
-    box-shadow: 0 0 0 8px rgba(0, 188, 212, 0.2);
+    box-shadow: 0 0 0 8px rgba(107, 142, 35, 0.2); /* Sombra del icono en verde oliva */
     z-index: 1;
 }
 
 .timeline-content {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(var(--pastel-secondary-rgb), 0.7); /* Fondo del contenido de la timeline en tono pastel suave */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -239,7 +248,7 @@ body {
     right: -15px;
     border-width: 15px 0 15px 15px;
     border-style: solid;
-    border-color: transparent transparent transparent rgba(255, 255, 255, 0.7);
+    border-color: transparent transparent transparent rgba(var(--pastel-secondary-rgb), 0.7);
 }
 
 .timeline-item:nth-child(even) .timeline-content::before {
@@ -249,7 +258,7 @@ body {
     left: -15px;
     border-width: 15px 15px 15px 0;
     border-style: solid;
-    border-color: transparent rgba(255, 255, 255, 0.7) transparent transparent;
+    border-color: transparent rgba(var(--pastel-secondary-rgb), 0.7) transparent transparent;
 }
 
 /* Videos Destacados - Grid */
@@ -260,7 +269,7 @@ body {
 }
 
 .video-item {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(var(--pastel-secondary-rgb), 0.8); /* Fondo de los items de video en tono pastel suave */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
@@ -281,7 +290,8 @@ body {
 
 .video-item h3 {
     font-size: 1.3em;
-    color: var(--sky-blue-dark);
+    /* Títulos de los videos en verde pastel oscuro */
+    color: var(--pastel-green-dark);
     padding: 15px 15px 5px;
 }
 
@@ -292,7 +302,8 @@ body {
 }
 
 .watch-video-btn {
-    background-color: var(--sky-blue-medium);
+    /* Botón de ver video en verde pastel medio */
+    background-color: var(--pastel-green-medium);
     color: var(--text-color-light);
     border: none;
     padding: 10px 20px;
@@ -304,6 +315,7 @@ body {
 }
 
 .watch-video-btn:hover {
+    /* Hover del botón de ver video en verde oliva */
     background-color: var(--accent-color);
     transform: translateY(-2px);
 }
@@ -318,13 +330,13 @@ body {
 
 .secondary-cta {
     background-color: transparent;
-    border: 2px solid var(--accent-color);
-    color: var(--accent-color);
+    border: 2px solid var(--accent-color); /* Borde del botón secundario en verde oliva */
+    color: var(--accent-color);           /* Texto del botón secundario en verde oliva */
     box-shadow: none;
 }
 
 .secondary-cta:hover {
-    background-color: var(--accent-color);
+    background-color: var(--accent-color); /* Hover del botón secundario en verde oliva */
     color: var(--text-color-light);
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -332,7 +344,8 @@ body {
 
 /* Footer */
 .main-footer {
-    background-color: var(--sky-blue-dark);
+    /* Footer en un tono de verde pastel más oscuro */
+    background-color: var(--pastel-green-dark);
     color: var(--text-color-light);
     padding: 30px 0;
     text-align: center;
@@ -351,7 +364,7 @@ body {
 }
 
 .main-footer .social-links a:hover {
-    color: var(--sky-blue-light);
+    color: var(--pastel-green-lightest); /* Hover de los iconos sociales en verde pastel claro */
     transform: scale(1.1);
 }
 
@@ -404,93 +417,4 @@ body {
 }
 
 .close-button {
-    color: #aaa;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.close-button:hover,
-.close-button:focus {
-    color: var(--accent-color);
-    text-decoration: none;
-}
-
-.video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    height: 0;
-    overflow: hidden;
-    margin-top: 20px;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .main-header h1 {
-        font-size: 2.5em;
-    }
-
-    .main-header p {
-        font-size: 1em;
-    }
-
-    .icon-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .timeline::before {
-        left: 20px;
-    }
-
-    .timeline-item {
-        width: 100%;
-        padding-left: 50px;
-        padding-right: 0;
-        text-align: left;
-    }
-
-    .timeline-item:nth-child(odd),
-    .timeline-item:nth-child(even) {
-        left: 0;
-    }
-
-    .timeline-icon {
-        left: 20px;
-        transform: translateX(-50%);
-    }
-
-    .timeline-item:nth-child(odd) .timeline-content::after {
-        border-width: 15px 15px 15px 0;
-        border-color: transparent rgba(255, 255, 255, 0.7) transparent transparent;
-        left: -15px;
-        right: auto;
-    }
-
-    .video-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .button-group {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cta-button {
-        width: 80%;
-        max-width: 300px;
-    }
-}
+    color
