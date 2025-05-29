@@ -1,0 +1,121 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f0f8ff; /* Azul muy claro, como el cielo */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #e0f2f7; /* Otro tono claro de azul */
+    color: #4dd0e1;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    width: 80%;
+    max-width: 960px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.panel {
+    display: none;
+    padding: 20px;
+    border-bottom: 1px solid #e0f2f7;
+}
+
+.panel.activo {
+    display: block;
+}
+
+h1, h2 {
+    color: #29b6f6; /* Un tono más intenso de azul */
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.boton-dinamico {
+    background-color: #81d4fa;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 15px auto;
+}
+
+.boton-dinamico:hover {
+    background-color: #4fc3f7;
+}
+
+#videos-condiciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.video-container {
+    border: 1px solid #b3e5fc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 400px; /* Ajusta según necesites */
+    height: auto;
+    display: block;
+}
+
+.acciones {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.boton-accion {
+    background-color: #a7d9ed;
+    color: #333;
+    border: 1px solid #a7d9ed;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.boton-accion:hover {
+    background-color: #e0f7fa;
+    color: #29b6f6;
+}
+
+footer {
+    background-color: #e0f2f7;
+    color: #4dd0e1;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
