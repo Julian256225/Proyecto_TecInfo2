@@ -1,0 +1,230 @@
+/* Variables para colores - Tono Verde Pastel (similares a contenido.css) */
+:root {
+    --pastel-green-lightest: #E0F8E0; /* Un verde muy claro */
+    --pastel-green-light: #C1E1C1;    /* Un verde claro */
+    --pastel-green-medium: #A8D8A8;  /* Un verde medio pastel */
+    --pastel-green-dark: #8FBC8F;    /* Un verde pastel más oscuro */
+    --text-color-dark: #333;          /* Gris oscuro para el texto principal */
+    --text-color-light: #fff;         /* Blanco para texto sobre fondos oscuros */
+    --accent-color: #6B8E23;          /* Verde oliva para acentos */
+    --hover-color: #556B2F;           /* Verde oliva más oscuro para hover */
+    --card-background: rgba(255, 255, 255, 0.8); /* Blanco translúcido para las tarjetas */
+    --pastel-secondary: #F0FFF0;      /* Otro tono pastel muy suave */
+    --pastel-secondary-rgb: 240, 255, 240; /* Valores RGB para el tono pastel secundario (#F0FFF0) */
+}
+
+/* Estilos Generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, var(--pastel-green-lightest), var(--pastel-green-light));
+    color: var(--text-color-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 960px; /* Un poco más estrecho para un look minimalista */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Encabezado */
+.main-header {
+    background: linear-gradient(to right, var(--pastel-green-dark), var(--accent-color));
+    color: var(--text-color-light);
+    padding: 60px 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.main-header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.main-header p {
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+/* Contenido Principal */
+.main-content {
+    padding: 40px 0;
+}
+
+/* Tarjetas (secciones) */
+.card {
+    background-color: var(--card-background);
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(3px); /* Un poco de desenfoque para el fondo translúcido */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: var(--pastel-green-dark);
+    position: relative;
+}
+
+.card h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.card p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: justify; /* Justificado para los párrafos de texto largo */
+    margin-bottom: 15px;
+}
+
+/* Cuadrícula de Misión */
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.mission-item {
+    background-color: rgba(var(--pastel-secondary-rgb), 0.7);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.mission-item:hover {
+    transform: translateY(-5px);
+}
+
+.mission-item i {
+    font-size: 3em;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.mission-item h3 {
+    font-size: 1.3em;
+    color: var(--pastel-green-dark);
+    margin-bottom: 8px;
+}
+
+.mission-item p {
+    font-size: 0.95em;
+    color: #666;
+    text-align: center; /* Centrado para el texto de los ítems de misión */
+}
+
+/* Botón interactivo */
+.cta-button {
+    background-color: var(--accent-color);
+    color: var(--text-color-light);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: inline-flex; /* Para alinear el icono y el texto */
+    align-items: center;
+    gap: 10px; /* Espacio entre icono y texto */
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--pastel-green-dark);
+    color: var(--text-color-light);
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.main-footer .social-links {
+    margin-top: 20px;
+}
+
+.main-footer .social-links a {
+    color: var(--text-color-light);
+    font-size: 1.8em;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.main-footer .social-links a:hover {
+    color: var(--pastel-green-lightest);
+    transform: scale(1.1);
+}
+
+/* Animaciones de Fade-in (Iguales que en contenido.css) */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 2.5em;
+    }
+
+    .main-header p {
+        font-size: 1em;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card h2 {
+        font-size: 1.8em;
+    }
+
+    .mission-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .cta-button {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+}
