@@ -66,9 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const videoContainer = document.querySelector('.video-container');
 
     const youtubeVideoIds = {
-        video1: 'YOUR_YOUTUBE_VIDEO_ID_1', // Replace with actual YouTube video IDs
-        video2: 'YOUR_YOUTUBE_VIDEO_ID_2',
-        video3: 'YOUR_YOUTUBE_VIDEO_ID_3'
+        video1: 'ID_REAL_VIDEO_1', // ¡REEMPLAZA ESTO CON EL ID REAL DE YOUTUBE! Ejemplo: 'dQw4w9WgXcQ'
+        video2: 'ID_REAL_VIDEO_2', // ¡REEMPLAZA ESTO CON EL ID REAL DE YOUTUBE!
+        video3: 'ID_REAL_VIDEO_3'  // ¡REEMPLAZA ESTO CON EL ID REAL DE YOUTUBE!
     };
 
     watchVideoButtons.forEach(button => {
@@ -77,7 +77,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const youtubeId = youtubeVideoIds[videoId];
 
             if (youtubeId) {
-                videoContainer.innerHTML = <iframe src="https://www.youtube.com/embed/${youtubeId}?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>;
+                // *** ESTA ES LA LÍNEA CRÍTICA CORREGIDA ***
+                videoContainer.innerHTML = `<iframe src="https://www.youtube.com/embed/${youtubeId}?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
                 videoModal.classList.add('show');
             } else {
                 alert('Video no disponible. Por favor, intente de nuevo más tarde.');
