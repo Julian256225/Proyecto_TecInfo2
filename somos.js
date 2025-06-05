@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         viewDocumentBtn.addEventListener('click', () => {
             // **IMPORTANTE:** Reemplaza 'ruta/a/tu/documento.pdf' con la ruta real a tu archivo PDF.
             // Si el PDF está en la misma carpeta que somos.html, solo pon el nombre del archivo, ej: 'proyecto.pdf'
-            const documentPath = 'nombre-de-tu-documento.pdf'; // <-- ¡CAMBIA ESTO!
+            const documentPath = 'hAMBRE CERO.pdf'; // <-- ¡CAMBIA ESTO!
             
             // Abre el documento en una nueva pestaña
             window.open(documentPath, '_blank');
