@@ -12,6 +12,16 @@ header {
     text-align: center;
 }
 
+/* Estilos para la marquesina en index.html */
+.marquesina-superior {
+    background-color: #e0f8e0; /* Un verde pastel claro */
+    color: #333; /* Color de texto oscuro */
+    padding: 10px 0; /* Un poco de padding arriba y abajo */
+    font-family: 'Montserrat', sans-serif; /* Asegúrate de que esta fuente esté cargada en tu index.html si la quieres */
+    font-weight: bold; /* Texto en negritas */
+    text-align: center;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
